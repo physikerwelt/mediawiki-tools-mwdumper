@@ -2,7 +2,7 @@ A quick little tool for extracting sets of pages from a MediaWiki dump file.
 
 Can read MediaWiki XML export dumps (version 0.3, minus uploads), perform
 optional filtering, and output back to XML or to SQL statements to add things
-directly to a database in 1.4 or 1.5 schema.
+directly to a database in 1.4, 1.5 or 1.25 schema.
 
 Still very much under construction.
 
@@ -19,7 +19,7 @@ If strange XML errors are encountered under Java 1.4, try 1.5:
 USAGE:
 
 Sample command line for a direct database import:
-  java -jar mwdumper.jar --format=mysql:1.5 pages_full.xml.bz2 |
+  java -jar mwdumper.jar --format=mysql:1.25 pages_full.xml.bz2 |
     mysql -u <username> -p <databasename>
 
 You can also do complex filtering to produce multiple output files:
@@ -146,7 +146,7 @@ Make sure you have Maven 2 or later installed on your system, then:
 
     mvn package
 
-This will compile and build target/mwdumper-1.16.jar, which can be run
+This will compile and build target/mwdumper-1.25.jar, which can be run
 as in the USAGE section above.
 
 
